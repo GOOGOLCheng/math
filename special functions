@@ -1,0 +1,15 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+def f(x):
+    return np.sin(x * np.sin(1/x)) / (x * np.sin(1/x))
+
+x = np.linspace(-1/np.pi, 1/np.pi, 1000)
+y = f(x)
+
+plt.figure(figsize=(10, 6))
+plt.plot(x, y)
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("Graph of sin(x * sin(1/x)) / (x * sin(1/x)) near x=0")
+plt.show()
